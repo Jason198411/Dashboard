@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <link rel="stylesheet" href="css/normalize.css"> -->	
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="navg">
+			<div class="til"><span>My</span>App</div>
+			<div class="navg-r">
+				<div class="bell">
+					<div class="bell-dot"></div>
+					<img class="bell-icon" src="icons/icon-bell.svg" alt="bell icon">
+				</div>
+				<div class="profile">
+					<img src="icons/profile.jpg" alt="profile">
+				</div>
+				<div class="name">Jason Wang</div>
+			</div>
+		</div>		
+	</header>
+	<main>
+		<ul class="main-left">
+			<li><img src="icons/icon-dashboard.svg" alt="icon dashboard"></li>
+			<li><img src="icons/icon-members.svg" alt="icon members"></li>
+			<li><img src="icons/icon-visits.svg" alt="icon visits"></li>
+			<li><img src="icons/icon-settings.svg" alt="icon settings"></li>
+		</ul>
+		<div class="main-right">
+			<div class="search-bar">
+				<h1>Dashboard</h1>
+				<form action="">
+      				<input type="text" placeholder="Search.." name="search">
+     				<button type="submit"></button>     				
+    			</form>
+			</div>
+			<div class="alter">
+				<div class="alter-con">
+					<strong>Alter:</strong>
+					<p>Please check your mail box!!!!!</p>					
+				</div>
+				<img src="icons/cancel.svg" alt="cancel">
+			</div>
+			<div class="traffic">
+				<div class="traffic-title">
+					<h2>Traffic</h2>
+					<div class="chart-option">
+						<button class="btn hourly">Hourly</button>
+						<button class="btn daily">Daily</button>
+						<button class="btn weekly">Weekly</button>
+						<button class="btn monthly">Monthly</button>
+					</div>
+				</div>
+				<div class="lc lch">
+					<canvas id="line-chart-hourly" width="400" height="125"></canvas>
+				</div>
+				<div class="lc lcd">
+					<canvas id="line-chart-daily" width="400" height="125"></canvas>
+				</div>
+				<div class="lc lcw">
+					<canvas id="line-chart-weekly" width="400" height="125"></canvas>
+				</div>
+				<div class="lc lcm">
+					<canvas id="line-chart-monthly" width="400" height="125"></canvas>
+				</div>	
+			</div>
+			<div class="daily-mobile">
+				<div class="dailytraffic">
+					<h2>DAILY TRAFFIC</h2>
+					<canvas id="bar-chart" width="400" height="200"></canvas>
+				</div>
+				<div class="mobileusers">
+					<h2>MOBILE USERS</h2>
+					<canvas id="pei-chart" width="200" height="100"></canvas>
+				</div>
+			</div>
+			<div class="social-stats">
+				<h2>SOCIAL STATS</h2>
+				<div class="social">
+					<div class="icon">
+						<div class="social-icon">
+							<img class="twitter-icon" src="icons/icon-twitter.svg" alt="twitter">
+						</div>
+						<div class="twitter">
+							<p>Twitter</p>
+						    <p class="num">10,345</p>
+						</div>
+					</div>
+					<div class="icon">
+						<div class="social-icon">
+							<img class="facebook-icon" src="icons/icon-facebook.svg" alt="facebook">
+						</div>
+						<div class="facebook">
+							<p>Facebook</p>
+						    <p class="num">8,739</p>
+						</div>
+					</div>
+					<div class="icon">
+						<div class="social-icon">
+							<img class="google-icon" src="icons/icon-google-plus.svg" alt="google">
+						</div>
+						<div class="google">
+							<p>Google+</p>
+						    <p class="num">2,530</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="member-recent">
+				<div class="member">
+					<h2>NEW MEMBERS</h2>
+					<div class="member-item">
+						<img src="photos/25.jpg" alt="25">
+						<div class="info">
+							<p>Davy Jone</p>
+							<i>davy-jone@gmail.com</i>
+						</div>
+						<div class="date">
+							<i>10/10/2017</i>
+						</div>
+					</div>
+					<div class="member-item">
+						<img src="photos/50.jpg" alt="25">
+						<div class="info">
+							<p>Marry Ji</p>
+							<i>marry-ji1987441@gmail.com</i>
+						</div>
+						<div class="date">
+							<i>3/10/2017</i>
+						</div>						
+					</div>
+					<div class="member-item">
+						<img src="photos/68.jpg" alt="25">
+						<div class="info">
+							<p>Lily Jie</p>
+							<i>lilyjie0987@gmail.com</i>
+						</div>
+						<div class="date">
+							<i>1/10/2017</i>
+						</div>						
+					</div>
+					<div class="member-item">
+						<img src="photos/91.jpg" alt="25">
+						<div class="info">
+							<p>Jon Pei</p>
+							<i>jonpei7878@gmail.com</i>
+						</div>
+						<div class="date">
+							<i>10/09/2017</i>
+						</div>						
+					</div>
+				</div>
+				<div class="recent">
+					<h2>RECENT ACTITIVE</h2>
+					<div class="recent-item">
+						<img src="photos/25.jpg" alt="25">
+						<div class="info">
+							<p>Victoria Chambers commented on Webly app</p>
+							<p>4 hours ago</p>
+						</div>
+						<div class="greater">
+							<img src="icons/greater.svg" alt="greater">
+						</div>						
+					</div>
+					<div class="recent-item">
+						<img src="photos/50.jpg" alt="25">
+						<div class="info">
+							<p>Dale Byrd like the post Facebook's changes</p>
+							<p>5 hours ago</p>
+						</div>
+						<div class="greater">
+							<img src="icons/greater.svg" alt="greater">
+						</div>						
+					</div>
+					<div class="recent-item">
+						<img src="photos/68.jpg" alt="25">
+						<div class="info">
+							<p>Dawn Wood commented on Facebook's</p>
+							<p>6 hours ago</p>
+						</div>
+						<div class="greater">
+							<img src="icons/greater.svg" alt="greater">
+						</div>						
+					</div>
+					<div class="recent-item">
+						<img src="photos/91.jpg" alt="25">
+						<div class="info">
+							<p>Dan Oliver posted Webly SEO tips</p>
+							<p>1 day ago</p>
+						</div>
+						<div class="greater">
+							<img src="icons/greater.svg" alt="greater">
+						</div>						
+					</div>
+				</div>
+			</div>
+			<div class="message-setting">
+				<div class="message">
+					<h2>MESSAGE USER</h2>
+					<form action="">
+      					<input type="text" placeholder="Search for User" name="search">
+     					<textarea placeholder="Message for User" rows="5"></textarea>	
+     					<button type="submit">SEND</button> 
+    				</form>
+				</div>
+				<div class="setting">
+					<h2>SETTINGS</h2>
+					<div class="setting-sub">
+						<p>Send Email Notification</p>
+						<div class="onoffswitch">
+						    <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox" id="myonoffswitch1" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch1">
+						        <span class="onoffswitch-inner"></span>
+						        <span class="onoffswitch-switch"></span>
+						    </label>
+						</div>						
+					</div>
+					<div class="setting-sub">
+						<p>Set Profile to Public</p>
+						<div class="onoffswitch">
+						    <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+						    <label class="onoffswitch-label" for="myonoffswitch2">
+						        <span class="onoffswitch-inner"></span>
+						        <span class="onoffswitch-switch"></span>
+						    </label>
+						</div>
+					</div>
+					<select class="select">					
+	                  <option value="" disabled selected="selected">Select TImezone</option>
+	                  <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+	                	<option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+	                	<option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+	                	<option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+	                	<option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+	                	<option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+					</select>
+					<div class="save-cancel">
+						<button class="save">SAVE</button>
+						<button>CANCEL</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/Chart.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
